@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>finpulse — portfolio report</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js"></script>
+<style>
+* { box-sizing:border-box; margin:0; padding:0 }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+       background:#0d1117; color:#e6edf3; padding:2rem; line-height:1.6 }
+h1 { font-size:1.6rem; font-weight:700; margin-bottom:.25rem }
+h2 { font-size:.85rem; font-weight:600; color:#7d8590; margin:2rem 0 .75rem;
+     text-transform:uppercase; letter-spacing:.06em }
+.sub { color:#7d8590; font-size:.875rem; margin-bottom:2rem }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+        gap:12px; margin-bottom:1.5rem }
+.card { background:#161b22; border:1px solid #30363d; border-radius:8px; padding:1rem }
+.card .val { font-size:1.3rem; font-weight:700 }
+.card .lbl { font-size:.75rem; color:#7d8590; margin-top:4px }
+.charts { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2rem }
+.chart-box { background:#161b22; border:1px solid #30363d; border-radius:8px; padding:1rem }
+.chart-box h3 { font-size:.8rem; color:#7d8590; margin-bottom:.5rem; text-transform:uppercase }
+table { width:100%; border-collapse:collapse; background:#161b22;
+        border-radius:8px; overflow:hidden; font-size:.8rem; margin-bottom:2rem }
+th { text-align:left; padding:.5rem 1rem; color:#7d8590; font-size:.75rem;
+     font-weight:600; border-bottom:1px solid #30363d }
+td { padding:.4rem 1rem; border-bottom:1px solid #21262d }
+tr:last-child td { border-bottom:none }
+.ai-box { background:#161b22; border:1px solid #e3b341; border-radius:8px;
+          padding:1.25rem 1.5rem; color:#e6edf3; font-size:.95rem;
+          line-height:1.7; margin-bottom:2rem }
+</style>
+</head>
+<body>
+  <h1>💰 finpulse</h1>
+  <p class="sub">Portfolio report · 2026-05-31 16:26 UTC</p>
+
+  <h2>Summary</h2>
+  <div class="grid"><div class="card"><div class="val" style="color:#58a6ff">$87,761.10</div><div class="lbl">Total value</div></div><div class="card"><div class="val" style="color:#7d8590">$54,890.00</div><div class="lbl">Cost basis</div></div><div class="card"><div class="val" style="color:#3fb950">+$32,871.10</div><div class="lbl">Total P&L</div></div><div class="card"><div class="val" style="color:#3fb950">+59.89%</div><div class="lbl">Return</div></div><div class="card"><div class="val" style="color:#c084fc">8</div><div class="lbl">Holdings</div></div></div>
+
+  <h2>Market overview</h2>
+  <div class="grid"><div class="card"><div class="val" style="color:#3fb950">▲ 0.62%</div><div class="lbl">S&amp;P 500</div></div><div class="card"><div class="val" style="color:#3fb950">▲ 1.04%</div><div class="lbl">NASDAQ</div></div><div class="card"><div class="val" style="color:#f85149">▼ 0.34%</div><div class="lbl">Gold</div></div><div class="card"><div class="val" style="color:#3fb950">▲ 1.16%</div><div class="lbl">Bitcoin</div></div><div class="card"><div class="val" style="color:#f85149">▼ 1.56%</div><div class="lbl">Ethereum</div></div></div>
+
+  
+        <h2>🤖 AI Analysis</h2>
+        <div class="ai-box">Your portfolio is up 46.2% overall, driven by an exceptional run in NVIDIA (+76.6%) and Bitcoin (+86.9%), which together account for nearly 60% of your total value — a strong but concentrated bet on the AI infrastructure and digital asset cycles. ONDO is the standout surprise, up 80.5% and gaining momentum as real-world asset tokenization attracts fresh institutional interest; it's a small position but worth watching. Tesla is the only drag at -18.9%, weighed down by slowing EV demand and margin pressure. The main risk here is concentration: if NVDA pulls back on any earnings miss or export restriction news, it alone could swing your entire portfolio by 10%+.</div>
+
+  <h2>Allocation & performance</h2>
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Portfolio allocation</h3>
+      <div id="pie"></div>
+    </div>
+    <div class="chart-box">
+      <h3>Total return by asset</h3>
+      <div id="bar"></div>
+    </div>
+  </div>
+
+  <h2>Holdings</h2>
+  <table>
+    <thead><tr>
+      <th>Ticker</th><th>Name</th><th>Shares</th><th>Avg buy</th>
+      <th>Current</th><th>Value</th><th>P&L ($)</th><th>Return</th>
+      <th>1D</th><th>1M</th><th>Alloc</th>
+    </tr></thead>
+    <tbody><tr>
+          <td><strong>BTC-USD</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Bitcoin</td>
+          <td>0.35</td>
+          <td>$58,000.00</td>
+          <td>$108,400.00</td>
+          <td>$37,940.00</td>
+          <td style="color:#3fb950;font-weight:600">+$17,640.00</td>
+          <td style="color:#3fb950">+86.9%</td>
+          <td style="color:#3fb950">+1.2%</td>
+          <td style="color:#3fb950">+22.1%</td>
+          <td>43.2%</td>
+        </tr><tr>
+          <td><strong>NVDA</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">NVIDIA Corp.</td>
+          <td>15</td>
+          <td>$580.00</td>
+          <td>$1,024.50</td>
+          <td>$15,367.50</td>
+          <td style="color:#3fb950;font-weight:600">+$6,667.50</td>
+          <td style="color:#3fb950">+76.6%</td>
+          <td style="color:#3fb950">+2.9%</td>
+          <td style="color:#3fb950">+31.4%</td>
+          <td>17.5%</td>
+        </tr><tr>
+          <td><strong>ETH-USD</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Ethereum</td>
+          <td>3</td>
+          <td>$2,800.00</td>
+          <td>$3,920.00</td>
+          <td>$11,760.00</td>
+          <td style="color:#3fb950;font-weight:600">+$3,360.00</td>
+          <td style="color:#3fb950">+40.0%</td>
+          <td style="color:#f85149">-1.6%</td>
+          <td style="color:#3fb950">+14.6%</td>
+          <td>13.4%</td>
+        </tr><tr>
+          <td><strong>ONDO-USD</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Ondo Finance</td>
+          <td>5000</td>
+          <td>$0.82</td>
+          <td>$1.48</td>
+          <td>$7,400.00</td>
+          <td style="color:#3fb950;font-weight:600">+$3,300.00</td>
+          <td style="color:#3fb950">+80.5%</td>
+          <td style="color:#3fb950">+4.2%</td>
+          <td style="color:#3fb950">+48.3%</td>
+          <td>8.4%</td>
+        </tr><tr>
+          <td><strong>MSFT</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Microsoft Corp.</td>
+          <td>10</td>
+          <td>$365.00</td>
+          <td>$432.80</td>
+          <td>$4,328.00</td>
+          <td style="color:#3fb950;font-weight:600">+$678.00</td>
+          <td style="color:#3fb950">+18.6%</td>
+          <td style="color:#f85149">-0.7%</td>
+          <td style="color:#3fb950">+5.3%</td>
+          <td>4.9%</td>
+        </tr><tr>
+          <td><strong>META</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Meta Platforms</td>
+          <td>8</td>
+          <td>$420.00</td>
+          <td>$536.90</td>
+          <td>$4,295.20</td>
+          <td style="color:#3fb950;font-weight:600">+$935.20</td>
+          <td style="color:#3fb950">+27.8%</td>
+          <td style="color:#3fb950">+1.1%</td>
+          <td style="color:#3fb950">+10.8%</td>
+          <td>4.9%</td>
+        </tr><tr>
+          <td><strong>AAPL</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Apple Inc.</td>
+          <td>20</td>
+          <td>$172.00</td>
+          <td>$214.30</td>
+          <td>$4,286.00</td>
+          <td style="color:#3fb950;font-weight:600">+$846.00</td>
+          <td style="color:#3fb950">+24.6%</td>
+          <td style="color:#3fb950">+0.9%</td>
+          <td style="color:#3fb950">+7.1%</td>
+          <td>4.9%</td>
+        </tr><tr>
+          <td><strong>TSLA</strong></td>
+          <td style="color:#7d8590;font-size:.8rem">Tesla Inc.</td>
+          <td>12</td>
+          <td>$245.00</td>
+          <td>$198.70</td>
+          <td>$2,384.40</td>
+          <td style="color:#f85149;font-weight:600">$-555.60</td>
+          <td style="color:#f85149">-18.9%</td>
+          <td style="color:#f85149">-2.0%</td>
+          <td style="color:#f85149">-12.3%</td>
+          <td>2.7%</td>
+        </tr></tbody>
+  </table>
+
+  <p style="color:#7d8590;font-size:.75rem;margin-top:2rem">
+    Made with <a href="https://github.com/ekrmsnr/finpulse" style="color:#e3b341">finpulse</a>
+    · Data from Yahoo Finance · Not financial advice
+  </p>
+
+<script>
+const dark = {
+  paper_bgcolor:'#161b22', plot_bgcolor:'#161b22',
+  font:{color:'#e6edf3',size:11},
+  margin:{t:10,r:10,b:40,l:50}
+};
+
+Plotly.newPlot('pie', [{
+  labels: ['AAPL', 'MSFT', 'NVDA', 'TSLA', 'META', 'BTC-USD', 'ETH-USD', 'ONDO-USD'],
+  values: [4286.0, 4328.0, 15367.5, 2384.4, 4295.2, 37940.0, 11760.0, 7400.0],
+  type: 'pie',
+  marker: {colors: ['#58a6ff', '#3fb950', '#c084fc', '#e3b341', '#f85149', '#79c0ff', '#56d364', '#d2a8ff']},
+  textinfo: 'label+percent',
+  hovertemplate: '%{label}<br>$%{value:,.2f}<br>%{percent}<extra></extra>'
+}], {...dark, showlegend:false, margin:{t:10,r:10,b:10,l:10}},
+{responsive:true, displayModeBar:false});
+
+Plotly.newPlot('bar', [{
+  x: [-18.9, 18.58, 24.59, 27.83, 40.0, 76.64, 80.49, 86.9], y: ['TSLA', 'MSFT', 'AAPL', 'META', 'ETH-USD', 'NVDA', 'ONDO-USD', 'BTC-USD'],
+  type:'bar', orientation:'h',
+  marker:{color:['#f85149', '#3fb950', '#3fb950', '#3fb950', '#3fb950', '#3fb950', '#3fb950', '#3fb950']},
+  hovertemplate:'%{y}: %{x:+.1f}%<extra></extra>'
+}], {...dark,
+  xaxis:{...dark.xaxis, title:'Return (%)', zeroline:true, zerolinecolor:'#30363d'},
+  yaxis:{autorange:'reversed'},
+  showlegend:false, margin:{...dark.margin, l:60}
+}, {responsive:true, displayModeBar:false});
+</script>
+</body>
+</html>
