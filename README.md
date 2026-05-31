@@ -11,6 +11,8 @@ finpulse portfolio.csv
 
 ## Quick start
 
+📊 [View live demo report](https://ekrmsnr.github.io/finpulse/demo-report.html)
+
 **1. Try it instantly (no setup needed):**
 ```bash
 pip install finpulse
