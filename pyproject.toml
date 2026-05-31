@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finpulse"
+version = "0.1.0"
+description = "Real-time portfolio analyzer with AI insights — stocks, crypto, and more."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["finance", "portfolio", "stocks", "crypto", "cli", "ai", "anthropic"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+]
+dependencies = [
+    "yfinance>=0.2",
+    "rich>=13.0",
+    "pandas>=1.5",
+    "plotly>=5.0",
+    "anthropic>=0.25",
+]
+
+[project.scripts]
+finpulse = "finpulse.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["finpulse*"]
